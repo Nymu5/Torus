@@ -59,10 +59,10 @@ public class Graphic extends JPanel {
         }
 
         int radius_torus = 100;
-        int radius = 100;
-        int segments_2d = 36;
+        int radius = 400;
+        int segments_2d = 12;
         double angle_2d = 2*Math.PI/segments_2d;
-        int segments_3d = 144;
+        int segments_3d = 12;
         double angle_3d = 2*Math.PI/segments_3d;
         Point3D[][] points_3d_array = new Point3D[segments_3d][segments_2d];
         for (int r=0; r<segments_3d; r++) {
