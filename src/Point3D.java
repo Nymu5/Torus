@@ -37,4 +37,15 @@ public class Point3D {
         this.y = this.x*Math.sin(angle);
         this.x = this.x*Math.cos(angle);
     }
+
+    public double angle(Point3D point) {
+        double angle = Math.acos((this.x*point.x + this.y*point.y + this.z*point.z)/(Math.sqrt(Math.pow(this.x, 2)+Math.pow(this.y, 2)+Math.pow(this.z, 2))*Math.sqrt(Math.pow(point.x, 2)+Math.pow(point.y, 2)+Math.pow(point.z, 2))));
+        return angle;
+    }
+
+    public Point3D perpendicular(Point3D point) {
+        Point3D perpendicular;
+        perpendicular = new Point3D(this.y*point.z - this.z*point.y, this.z*point.x-this.x*point.z, this.x*point.y-this.y*point.x);
+        return perpendicular;
+    }
 }
